@@ -1,0 +1,73 @@
+
+
+\chapter{Aufgabenblatt 04}
+
+\section{Datengest"utzte Anwendungen}
+In der vergangenen Woche haben Sie das Relationenmodell f"ur die mobile Uni-Applikation erstellt.
+Dies liegt mittlerweile in der Datenbank vor.
+F"ur die Entwicklung des Mensa-Moduls ben"otigen Sie Ausschnitte aus dieser Datenbank f"ur die Anzeige auf dem mobilen Client.\\
+In der Vorlesung haben Sie die Elemente von SQL-Abfragen kennen gelernt.
+
+
+\subsection{Aufgabe 1: SQL}
+Erstellen Sie eine Abgrage, die den Namen und die Bewertung aller Gerichte ausgibt, die in der Zentralmensa in N"urnberg angeboten werden.
+
+\lstset{style=customSQL}
+\begin{lstlisting}
+SELECT      g.Name, g.Bewertung
+FROM        Gericht as g
+            JOIN Mensa as m ON g.Mensa = m.Dienststellennummer
+WHERE       m.Ort = 'Nuernberg'
+            AND m.Name LIKE '%Zentralmensa%'
+;
+\end{lstlisting}
+
+\subsection{Aufgabe 2: SQL}
+Listen Sie den Namen und die Beschreibung aller vegetarischen Gerichte auf, die in den Mensen des Studentenwerks angeboten werden.
+Beachten Sie dabei, dass ein Gericht nur dann vegetarisch ist, wenn alle Zutaten vegetarisch sind.\\
+
+\lstset{style=customSQL}
+\begin{lstlisting}
+-- Achtung!
+-- Dieses SQL ist _nur_ auf die in der vorhergehenden
+-- Aufgabe definierten Tabellen ausgelegt!
+-- Es wurde auf das richtige Ergebnis ueberprueft.
+
+SELECT      RefNum,Name 
+FROM        Gericht
+WHERE       Gericht.RefNum NOT IN
+            (
+                -- create a table with all meals containing meat
+                SELECT      r.GerichtID
+                FROM        Rezept AS r
+                            LEFT OUTER JOIN 
+                            (
+                                SELECT  z.BestNum
+                                FROM    Zutat AS z
+                                WHERE   z.IstVegetarisch = 1
+                            ) AS x
+                            ON r.ZutatId = x.BestNum
+                -- due to the left-outer join all 
+                -- meat-containing meals in table r join x
+                -- have their column 'BestNum' set to NULL
+                WHERE       x.BestNum IS NULL
+            )
+;
+\end{lstlisting}
+
+
+
+\noindent
+Beispiel-Tabelle (Rezept):\\
+\rowcolors{1}{LightGrey}{White}
+\begin{tabular}{ l l }
+    \rowcolor{LightSlateGray}
+    \textbf{GerichtId}  & \textbf{ZutatId}\\
+    id(Currywurst)      & id(Wurst)\\
+    id(Currywurst)      & id(Curry)\\
+    id(Kartoffelpuffer) & id(Kartoffeln)\\
+    id(Kartoffelpuffer) & id(Apfelmus)\\
+\end{tabular}
+
+
+

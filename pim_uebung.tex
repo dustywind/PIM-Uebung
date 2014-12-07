@@ -1,0 +1,110 @@
+
+\documentclass[11pt,oneside,a4wide]{report}
+
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[svgnames,table,hyperref]{xcolor}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{listings}
+%\usepackage[hyperindex,hidelinks]{hyperref}
+\usepackage[hyperindex]{hyperref}
+
+\onehalfspacing
+
+\lstdefinestyle{customXML}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    frame=L,
+    xleftmargin=\parindent,
+    language=XML,
+    showstringspaces=false,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny,
+}
+\lstdefinestyle{customSQL}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    frame=L,
+    xleftmargin=\parindent,
+    language=SQL,
+    showstringspaces=false,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny,
+}
+\lstdefinestyle{customHTML}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    frame=L,
+    xleftmargin=\parindent,
+    language=HTML,
+    showstringspaces=false,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny,
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries PIM L"osungen\\"Ubung\\[0.4cm] }
+    \HRule \\[1.5cm]
+
+    \textbf{Achtung: Dies ist keine offizielle L"osung!}
+
+    \vfill
+    Von:\\
+    Dustin Wind
+
+
+   \vfill
+    Zuletzt modifiziert am:\\
+    {\large \today}\\
+    \end{center}
+    \bigskip
+
+    {\small
+    Bentuzte Software:
+    \begin{itemize}
+        \item \href{http://www.latex-project.org}{\LaTeX{}: structured text formatting and typesetting}
+        \item \href{https://wiki.gnome.org/Apps/Dia/}{Dia: a diagram drawing program}
+    \end{itemize}
+    }
+
+\end{titlepage}
+
+%\maketitle
+
+\tableofcontents
+
+%\include{inc/Test/test}
+\include{inc/aufgabe01/aufgabe01}
+\include{inc/aufgabe02/aufgabe02}
+\include{inc/aufgabe03/aufgabe03}
+\include{inc/aufgabe04/aufgabe04}
+
+\end{document}
+
+
+
