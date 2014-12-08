@@ -1,0 +1,82 @@
+
+\chapter{Aufgabenblatt 07}
+
+\section{Datenmodellierung mit XML}
+Bestellungen der Mensa sollen innerhalb des E-Procurement-Systems direkt an die Lieferanten weitergeleitet werden.
+Die Lieferanten haben dazu jeweils definierte Auftragsschnittellen, die in XML definiert sind.\\
+
+\subsection{Aufgabe 1: XML-Definition}
+Bitte erstellen Sie eine XML-Definition (DTD), mit der Bestellung an einen Lieferangen "ubergeben werden und speichern Sie dieses als "`Order.dtd"' ab.
+Bitte ber"ucksichtigen Sie dabei die folgenden Anforderungen:
+\begin{itemize}
+    \item Tag-Namen sind grunds"atzlich in Englisch zu erstellen.
+    Die Bestellung (Order) ist das Root-Element.
+    \item Jede Bestellung enth"alt Name (SupplierName) und Id (SupplierID) des Lieferanten sowie das Auftragsdatum (OrderDate) und die Auftragsnummer (OrderNumber) als Elemente.
+    Eine Bestellung besteht zudem aus mindestens einem Bestellposten (Item).
+    \item Jeder Bestellposten bezieht sich auf ein bestimmtes Lebensmittel.
+    F"ur das Lebensmittel sollen neben Produktnummer (ItemNumber) sowie der Preis (Price) als Elemente mit angegeben werden.
+    Optional ist angegeben, wievielKalorien (Calories) das Nahrungsmittel pro 100g hat.
+    \item Der Standard-Lieferant der Mensa, "`Bauernhof Meier"' wird fest im System hinterlegt.
+    Bei Eingabe des K"urzels "`BM"' soll dieses automatisch durch die Zeichenkette "`Bauernhof Meier Nuernberg"' ersetzt werden.
+\end{itemize}
+
+\noindent
+Ob Ihre DTD valide ist k"onnen sie auf folgender Seite "uberpr"ufen:\\
+\url{http://www.validome.org/grammar/validate/}\\
+
+
+\lstinputlisting[style=customXML]{./inc/aufgabe07/order.dtd}
+
+\subsection{Aufgabe 2: XML-Daten}
+Bitte erstellen Sie auf Basis der Definition eie XML-Datei (Order.xml), die die DTD referenziert und die mindestens vier Bestellposten enth"alt.
+Stellen Sie bitte sicher, dass die erstellte XML Datei sowohl g"ultig als auch wohlgeformt ist.\\
+
+\lstinputlisting[style=customXML]{./inc/aufgabe07/order.xml}
+
+\section{XML/KML und Mashup}
+Als besonderes Extra m"ochten Sie in das Mensa Modul Ihres mobilen Universit"atsportals eine Google Maps Karte einbauen.//
+
+\subsection{Aufgabe 1: Statische Positionsbeschreibung}
+Sie m"ochten die Positionen der einzelnen Mensen auf einer Google Maps Karte in der Satellitendarstellung anzeigen lassen.\\
+Erstellen Sie dazu eine KML Datei und f"ugen Sie die Positionen der folgenden Mensen als einfache Lokation hinzu:
+\begin{itemize}
+    \item Mensa Langemarckplatz, Langemarckplatz 4, 91054 Erlangen
+    \item S"udmensa, Erwin-Rommel-Stra"se 60, 91058 Erlangen
+    \item Mensa Insel Sch"utt, Andreij-Sacharow-Platz 1, 90403 N"urnberg
+    \item Mensa Regensburger Stra|se, Regensburger Str. 160, 90478 N"urnberg
+    \item Ausgabemensa St. Paul, Dutzendteichstra"se 24, 90478 N"urnberg
+    \item Mensateria Ohm, Wollentorstr. 4, 90409 N"urnberg
+\end{itemize}
+Iin der Beschreibung der Positionen sollen sowohl der name der Mensa als auch die vollst"andige Adresse angezeigt werden.\\
+Um die Funktionalit"at der von Ihnen erstellten Datei testen zu k"onnen, kopieren Sie bitte den Quelltext in die Zwischenablage und lassen Sie sich die Karte auf folgender Webseite anzeigen:\\
+\url{http://display-kml.appspot.com}
+
+\subsection{Aufgabe 2: Polygone in KML}
+Zus"atzlich zu den Positionen der einzelnen Mensen m"ochten Sie auch die WISO Fakult"at auf der Karte darstellen.
+Sie m"ochten die Einrichtung jedoch nicht nur als einfachen Marker darstellen, sondern das Geb"aude farblich markieren.\\
+Erweitern Sie dazu im Text Editor die in Aufgabe 1 erstellte KML Datei so, damit sie folgende Eigenschaften zur Darstellung der farblichen Markierung erf"ullt:
+\begin{itemize}
+    \item Darstelung eines Polygons
+    \item Die "au"sere Kante soll entlang der folgenden Koordination verlaufen:
+    \begin{itemize}
+        \item 11.084944,49.458151,100
+        \item 11.085081,49.457841,100
+        \item 11.086463,49.458082,100
+        \item 11.086058,49.459037,100
+        \item 11.084810,49.458803,100
+        \item 11.084875,49.458592,100
+        \item 11.085661,49.458713,100
+        \item 11.085838,49.458312,100
+    \end{itemize}
+\end{itemize}
+Speichern Sie die Datei unter dem Namen mensafak.kml.\\
+Um die Funktionalit"at der von Ihnen erstellten Datei testen zu k"onnen, kopieren Sie bitte den Quelltext in die Zwischenablage und lassen Sie sich die Karte auf folgender Webseite anszeigen:\\ 
+\url{http://display-kml.appspot.com}
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+ <!DOCTYPE Order "Order.dtd">
+ <?xml version='1.0' encoding='ISO-8859-9'?>
+ <Order>
+    <SupplierName>Wuerschtel Sepp<SupplierName>
+    <SupplierID>123</SupplierID>
+    <OrderDate>20.11.2014</OrderDate>
+    <OrderNumber>42</OrderNumber>
+    <Item>
+        <ItemNumber>32</ItemNumber>
+        <Quantity>1</Quantity>
+        <Manufacturer>Wurst &amp; Co. KG</Manufactoruer>
+        <Price>0.50</Price>
+        <Calories>500</Calories>
+    </Item>
+    <!-- etc. etc. ... -->
+    <Item>
+        <!-- ... -->
+    </Item>
+    <Item>
+        <!-- ... -->
+    </Item>
+    <Item>
+        <!-- ... -->
+    </Item>
+ </Order>
+

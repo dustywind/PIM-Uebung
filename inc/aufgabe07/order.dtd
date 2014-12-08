@@ -1,0 +1,13 @@
+<!ELEMENT Order (SupplierName, SupplierID, OrderDate, OrderNumber, (Item)+)>
+    <!ELEMENT SupplierName (#PCDATA)>
+    <!ELEMENT SupplierID (#PCDATA)>
+    <!ELEMENT OrderDate (#PCDATA)>
+    <!ELEMENT OrderNumber (#PCDATA)>
+    <!ELEMENT Item (ItemNumber, Quantity, Manufacturer, Price, (Calories)?)>
+        <!ELEMENT ItemNumber (#PCDATA)>
+        <!ELEMENT Quantity (#PCDATA)>
+        <!ELEMENT Manufacturer (#PCDATA)>
+        <!ELEMENT Price (#PCDATA)>
+        <!ELEMENT Calories (#PCDATA)>
+    <!ENTITY BM 'Bauernhof Meier'>
+
