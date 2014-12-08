@@ -1,0 +1,6 @@
+*.aux
+*.toc
+*.out
+*.pdf
+*.log
+./inc/*/*.aux
