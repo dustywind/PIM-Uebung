@@ -5,3 +5,4 @@
 *.log
 ./inc/*/*.aux
 *.gz
+*.swp
