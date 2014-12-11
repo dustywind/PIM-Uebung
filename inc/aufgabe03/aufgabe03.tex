@@ -36,12 +36,29 @@ Bestimmen Sie daraufhin die jeweiligen Schl"usselattribute.\\
 \fbox{
     \parbox{\textwidth}{
         \textbf{Mensachef}(\underline{Personalnummer}, Name, Vorname, Rang)\\
-        \textbf{Mensa}(\underline{Dienststellennummer}, \underline{Name}, \underline{Ort}, Personalnummer)\\
-        \textbf{Gericht}(\underline{Referenznummer}, Name, Beschreibung, Angebotart, MenueGang, Bewertung, Mensa)\\
+        \textbf{Mensa}(\underline{Dienststellennummer, Name, Ort}, $\overline{Personalnummer}$)\\
+        \textbf{Gericht}(\underline{Referenznummer}, Name, Beschreibung, Angebotart, MenueGang, Bewertung, $\overline{Mensa}$)\\
         \textbf{Zutat}(\underline{Bestellnummer}, Bezeichnung, MHD, Allergika, IstVegetarisch)\\
-        \textbf{Rezept}(\underline{GerichtId}, \underline{ZutatId})\\
+        \textbf{Rezept}(\underline{GerichtId[Gericht], ZutatId[Zutat]})\\
+        
+        \noindent
+        {\small \textbf{Anm. des Autors}: Fremdschl"usselbeziehungen k"onnen entweder durch einen Oberstrich gekennzeichnet werden, oder durch das Angeben der Tabelle, auf die der  Fremdschl"ussel refenziert, in eckigen Klammern.\\
+        Im Zweifel sollte w"ahrend der Klausur die Methode der Vorlesung gew"ahlt werden!}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
