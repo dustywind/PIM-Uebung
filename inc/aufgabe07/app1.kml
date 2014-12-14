@@ -1,10 +1,47 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<kml xmlns='http://www.opengis.net/kml/2.2'>
-    <Placemark>
-        <name>Z&uuml;rich</name>
-        <description>Z&uml;rich</description>
-        <Point>
-            <coordinates>8.55,47.366667,0</coordinates>
-        </Point>
-    </Placemark>
-</kml>
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+	<Placemark>
+		<name>Mensa Langermarckplatz</name>
+		<description>Mensa Langemarckplatz, Langemarckplatz 4, 91054 Erlangen</description>
+		<Point>
+			<coordinates>11.010779,49.593803</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Mensa Langermarckplatz</name>
+		<description>Südmensa, Erwin-Rommel-Straße 60, 91058 Erlangen</description>
+		<Point>
+			<coordinates>11.029708, 49.574973</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Mensa Insel Schütt</name>
+		<description>Mensa Insel Schütt, Andreij-Sacharow-Platz 1, 90403 Nürnberg</description>
+		<Point>
+			<coordinates>11.084805,49.454112</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Mensa Regensburger Straße</name>
+		<description>Mensa Regensburger Straße, Regensburger Str. 160, 90478 Nürnberg</description>
+		<Point>
+			<coordinates>11.113373, 49.438986</coordinates>
+		</Point>
+	</Placemark>	
+	<Placemark>
+		<name>Ausgabemensa St. Paul</name>
+		<description>Ausgabemensa St. Paul, Dutzendteichstraße 24, 90478 Nürnberg</description>
+		<Point>
+			<coordinates>11.113862, 49.436977</coordinates>
+		</Point>
+	</Placemark>	
+	<Placemark>
+		<name>Mensateria Ohm</name>
+		<description>Mensateria Ohm, Wollentorstr. 4, 90409 Nürnberg</description>
+		<Point>
+			<coordinates> 11.094505, 49.452940</coordinates>
+		</Point>
+	</Placemark>
+</Document>	
+</kml>	
