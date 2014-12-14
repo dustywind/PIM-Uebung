@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- The title will be seen in the browsertab -->
-    <title>MensaApp</title>
-
-    <!-- IMPORTANT: -->
-    <!-- to make jQuery work, you have to reference it in the script source -->
-    <script src='http://code.jquery.com/jquery-1.8.2.min.js'></script>
+    <TITLE>MensaApp</TITLE>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head>
 <body>
-    <!-- heading -->
-    <h1>MensaApp der FAU</h1>
-    <!-- line break -->
-    <br/>
-    <br/>
-    <!-- insert image with the path specified in the src-attr. -->
-    <img src='./speiseplan.jpg'/>
-    <br/>
-    <br/>
-    <!-- print bold -->
-    <b>Herzlich Willkommen auf der Startseite</b>
-    <!-- paragraph -->
-    <p>Als Student haben Sie die M&ouml;glichkeit an folgenden Mensen zu speisen:</p>
-    <!-- unordered list -->
-    <ul>
-        <!-- list item -->
-        <li>
-            <!-- hyperlink that leads to the location specified in href -->
-            <a href='http://www.foo.bar'>Mensa Langemarckplatz</a>
-        </li>
-        <!-- this list was shorten -->
-        <!-- To see the complete list please look at 'Aufgabenblatt 02' -->
-    </ul>
-    <button></button>
+    <!-- Titel-->
+    <div data-role="page" data-theme="e">
+        <div data-role="header">
+            <h1>MensaAPP der FAU</h1>
+        </div><!-- /header -->
+        <!-- neue Zeile -->
+        <br/>
+        <!-- Bild -->
+        <img src="http://www.studentenwerk.uni-erlangen.de/verpflegung/pics/pic-sp02.jpg" />
+        <br/>
+        <!-- dick -->
+        <b>Herzlich Willkommen auf der Startseite</b>
+        <br/>
+        <p>Als Student haben Sie die M&oumlglichkeit an folgenden Mensen zu speisen:</p>
+        <!-- unsortierte Liste -->
+        <ul data-role="listview">
+        <!-- Listeneintrag -->
+        <!-- Link -->
+            <li>
+                <a href= "http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-er-langemarck.shtml">Mensa Langemarckplatz</a>
+            </li>
+            <li>
+                <a href="http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-er-sued.shtml">S&umldmensa</a>
+                </li>
+            <li>
+                <a href="http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-n-schuett.shtml"> Mensa Insel Sch&uumltt</a>
+            </li>
+            <li>
+                <a href="http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-n-regens.shtml">Mensa Regensburger Straße</a>
+            </li>
+            <li>
+                <a href="http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-n-stpaul.shtml"> Ausgabemensa St. Paul</a>
+            </li>
+            <li>
+                <a href="http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-n-mensateria.shtml"> Mensateria Ohm</a>
+            </li>
+        </ul>
+        <button data-role = "ui-btn">Standorte</button>
+    </div>
 </body>
 </html>
