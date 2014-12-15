@@ -15,8 +15,9 @@ Erstellen Sie eine Abgrage, die den Namen und die Bewertung aller Gerichte ausgi
 \lstset{style=customSQL}
 \begin{lstlisting}
 SELECT      g.Name, g.Bewertung
-FROM        Gericht as g
-            JOIN Mensa as m ON g.Mensa = m.Dienststellennummer
+FROM        Gericht AS g
+            JOIN Speiseplan AS s ON g.Referenznummer = s.GerichtId
+            JOIN Mensa AS m ON s.MensaId = m.Dienststellennummer
 WHERE       m.Ort = 'Nuernberg'
             AND m.Name LIKE '%Zentralmensa%'
 ;
@@ -28,12 +29,7 @@ Beachten Sie dabei, dass ein Gericht nur dann vegetarisch ist, wenn alle Zutaten
 
 \lstset{style=customSQL}
 \begin{lstlisting}
--- Achtung!
--- Dieses SQL ist _nur_ auf die in der vorhergehenden
--- Aufgabe definierten Tabellen ausgelegt!
--- Es wurde auf das richtige Ergebnis ueberprueft.
-
-SELECT      RefNum,Name 
+SELECT      Name, Beschreibung
 FROM        Gericht
 WHERE       Gericht.RefNum NOT IN
             (
